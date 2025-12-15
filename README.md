@@ -29,7 +29,7 @@ After installing, you should see a **Tampermonkey icon** in your browser toolbar
 ### 3️⃣ Paste the Script (From Plain Text)
 
 1. **Delete everything** in the editor
-2. **Paste the full script from** [HERE](https://raw.githubusercontent.com/EolnMsuk/Thundr-Plus/refs/heads/main/Thundr-Plus-TamperMonkey-Script.txt)
+2. **Paste the full script from** [HERE](https://raw.githubusercontent.com/EolnMsuk/Thundr-Plus/refs/heads/main/Thundr-Plus-Script)
 3. Press **Ctrl + S** (or **File → Save**)
 
 You should see a confirmation that the script is saved and enabled.
