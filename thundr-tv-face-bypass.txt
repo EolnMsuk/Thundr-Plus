@@ -1,0 +1,72 @@
+// ==UserScript==
+// @name         Thundr Privacy Shield: Persistence v3
+// @namespace    http://tampermonkey.net/
+// @version      3.0
+// @description  Bypasses Thundr's face detection by spoofing Worker responses and MediaPipe landmarks.
+// @author       Gemini
+// @match        *://thundr.tv/*
+// @match        *://*.thundr.tv/*
+// @match        *://thundr.com/*
+// @match        *://*.thundr.com/*
+// @grant        none
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Thundr uses dynamic JS chunks. We patch the global Worker constructor
+    // immediately at document-start to catch workers before they spawn.
+    const OriginalWorker = window.Worker;
+
+    const PatchedWorker = function(scriptURL) {
+        // Clue: Thundr uses vision-tasks/mediapipe for its 'AI moderation'.
+        if (scriptURL.includes('vision') || scriptURL.includes('mediapipe') || scriptURL.includes('face')) {
+            console.log('🛡️ Privacy Shield: Intercepting AI Moderation Worker');
+
+            // We create a dummy worker that mimics the exact data structure 
+            // Thundr's AI moderation expects (Detections + Landmarks).
+            const dummyWorkerCode = `
+                self.onmessage = function(e) {
+                    // Create a fake landmark set (a simple array of points)
+                    const fakeLandmarks = Array(478).fill({x: 0.5, y: 0.5, z: 0});
+                    
+                    self.postMessage({
+                        action: 'faceDetections',
+                        faces: 1,
+                        detections: [{
+                            score: [0.99], // High confidence face
+                            categories: [{categoryName: "face", score: 0.99}],
+                            boundingBox: { originX: 0, originY: 0, width: 1, height: 1 }
+                        }],
+                        landmarks: [fakeLandmarks]
+                    });
+                };
+            `;
+            const blob = new Blob([dummyWorkerCode], { type: 'application/javascript' });
+            return new OriginalWorker(URL.createObjectURL(blob));
+        }
+        return new OriginalWorker(scriptURL);
+    };
+
+    PatchedWorker.prototype = OriginalWorker.prototype;
+    Object.defineProperty(window, 'Worker', { value: PatchedWorker, writable: true, configurable: true });
+
+    // Patch WebSocket to monitor moderation 'rimage' events
+    const OriginalWebSocket = window.WebSocket;
+    const PatchedWebSocket = function(...args) {
+        const socket = new OriginalWebSocket(...args);
+        socket.addEventListener('message', (event) => {
+            try {
+                if (typeof event.data === 'string' && event.data.includes('"event":"rimage"')) {
+                    console.warn('🛡️ Privacy Shield: Server requested a moderation snapshot (rimage).');
+                }
+            } catch (e) {}
+        });
+        return socket;
+    };
+    PatchedWebSocket.prototype = OriginalWebSocket.prototype;
+    Object.defineProperty(window, 'WebSocket', { value: PatchedWebSocket, writable: true, configurable: true });
+
+    console.log('🛡️ Privacy Shield: Thundr.tv Patches Active');
+})();
