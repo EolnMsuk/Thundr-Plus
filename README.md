@@ -52,11 +52,11 @@ You should see a confirmation that the script is saved and enabled.
 
 ### Troubleshooting (If It Doesn’t Work)
 
-* 🔄 Refresh the page after installing
-* 🌐 Make sure you’re on the **correct website**
-* 🧩 Check that the script is **enabled**
-* 🛠️ Press **F12 → Console** and look for errors
-* 🔐 Some sites block scripts unless permissions are allowed
+* Refresh the page after installing
+* Make sure you’re on the **correct website**
+* Check that the script is **enabled**
+* Press **F12 → Console** and look for errors
+* Some sites block scripts unless permissions are allowed
 
 ### Removing the Script (To Remove)
 
