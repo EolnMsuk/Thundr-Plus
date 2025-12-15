@@ -50,7 +50,7 @@ You should see a confirmation that the script is saved and enabled.
 
 ---
 
-### 6️⃣ Troubleshooting (If It Doesn’t Work)
+### Troubleshooting (If It Doesn’t Work)
 
 * 🔄 Refresh the page after installing
 * 🌐 Make sure you’re on the **correct website**
@@ -60,7 +60,7 @@ You should see a confirmation that the script is saved and enabled.
 
 ---
 
-### 7️⃣ Editing or Removing the Script
+### Editing or Removing the Script
 
 * **Edit:** Tampermonkey icon → Dashboard → Click the script
 * **Disable:** Toggle it off
