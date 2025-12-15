@@ -7,7 +7,7 @@ A Tampermonkey script which bypasses face detection on thundr.com. Thundr's AI m
 
 Tampermonkey is a browser extension that runs user scripts.
 
-**Install it for your browser:**
+**Install it for your specific browser:**
 
 * **Chrome / Chromium / Brave / Edge:**
   [https://tampermonkey.net](https://tampermonkey.net)
@@ -18,7 +18,7 @@ After installing, you should see a **Tampermonkey icon** in your browser toolbar
 
 ---
 
-### 2️⃣ Create a New Script
+### 2️⃣ Add the Thundr-Plus script
 
 1. Click the **Tampermonkey icon**
 2. Select **“Create a new script…”**
