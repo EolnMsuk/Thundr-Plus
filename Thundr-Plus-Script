@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Thundr Privacy Shield: Persistence v3
+// @name         Thundr-Plus
 // @namespace    http://tampermonkey.net/
 // @version      3.0
 // @description  Bypasses Thundr's face detection by spoofing Worker responses and MediaPipe landmarks.
@@ -70,3 +70,4 @@
 
     console.log('🛡️ Privacy Shield: Thundr.tv Patches Active');
 })();
+
