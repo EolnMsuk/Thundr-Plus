@@ -1,5 +1,5 @@
 # Thundr-Plus
-A Tampermonkey script which bypasses face detection on thundr.com.
+A Tampermonkey script which bypasses face detection on thundr.com
 
 ## How to Install & Use the Thundr-Plus Tampermonkey Script
 
