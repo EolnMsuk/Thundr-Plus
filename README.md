@@ -14,15 +14,11 @@ A Tampermonkey script which bypasses face detection on thundr.com
 
 After installing, you should see a **Tampermonkey icon** in your browser toolbar.
 
----
-
 ### 2️⃣ Add the Thundr-Plus script
 
 1. Click the **Tampermonkey icon**
 2. Select **“Create a new script…”**
 3. A script editor will open with some default code
-
----
 
 ### 3️⃣ Paste the Script (From Plain Text)
 
@@ -32,15 +28,11 @@ After installing, you should see a **Tampermonkey icon** in your browser toolbar
 
 You should see a confirmation that the script is saved and enabled.
 
----
-
 ### 4️⃣ Enable the Script
 
 1. Click the **Tampermonkey icon**
 2. Make sure the script is **enabled** (toggle should be ON / green)
 3. Also make sure **Tampermonkey itself is enabled**
-
----
 
 ### 5️⃣ Use the Script
 
