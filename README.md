@@ -58,7 +58,7 @@ You should see a confirmation that the script is saved and enabled.
 * 🛠️ Press **F12 → Console** and look for errors
 * 🔐 Some sites block scripts unless permissions are allowed
 
-### Editing or Removing the Script
+### Removing the Script (To Remove)
 
 * **Edit:** Tampermonkey icon → Dashboard → Click the script
 * **Disable:** Toggle it off
