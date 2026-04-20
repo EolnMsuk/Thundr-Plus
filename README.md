@@ -55,3 +55,9 @@ You should see a confirmation that the script is saved and enabled.
 * **Edit:** Tampermonkey icon → Dashboard → Click the script
 * **Disable:** Toggle it off
 * **Delete:** Dashboard → Trash icon
+
+## Thanks
+
+Author: [EolnMsuk](https://github.com/EolnMsuk)
+
+Donate: [BTC](https://www.blockchain.com/explorer/addresses/btc/bc1qm06lzkdfule3f7flf4u70xvjrp5n74lzxnnfks) | [Venmo](https://venmo.com/user/eolnmsuk)
