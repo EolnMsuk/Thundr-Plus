@@ -56,8 +56,7 @@ You should see a confirmation that the script is saved and enabled.
 * **Disable:** Toggle it off
 * **Delete:** Dashboard → Trash icon
 
-## Thanks
+### Developer
 
-Author: [EolnMsuk](https://github.com/EolnMsuk)
-
-Donate: [BTC](https://www.blockchain.com/explorer/addresses/btc/bc1qm06lzkdfule3f7flf4u70xvjrp5n74lzxnnfks) | [Venmo](https://venmo.com/user/eolnmsuk)
+Created by [EolnMsuk](https://github.com/EolnMsuk) → [AntiDarkSword](https://github.com/EolnMsuk/AntiDarkSword/)  
+Donate: [BTC](https://www.blockchain.com/explorer/addresses/btc/bc1qm06lzkdfule3f7flf4u70xvjrp5n74lzxnnfks) or [Venmo](https://venmo.com/user/eolnmsuk)
